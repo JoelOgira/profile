@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./components/Header";
+import MyProfilePic from "./components/MyProfilePic";
 
 export const metadata: Metadata = {
   title: "My Profile",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="dark:bg-slate-800">{children}</body>
+      <body className="dark:bg-slate-800">
+        <Header />
+        <MyProfilePic />
+        {children}
+      </body>
     </html>
   );
 }
